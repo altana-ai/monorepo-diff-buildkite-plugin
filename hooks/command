@@ -67,7 +67,7 @@ downloader() {
 }
 
 get_latest_version() {
-  local _repo="https://api.github.com/repos/buildkite-plugins/monorepo-diff-buildkite-plugin"
+  local _repo="https://api.github.com/repos/altana-ai/monorepo-diff-buildkite-plugin"
   local _version=""
 
   if check_cmd curl; then
@@ -107,7 +107,7 @@ get_version() {
 download_binary_and_run() {
   get_architecture || return 1
   local _arch="$RETVAL"
-  local _repo="https://github.com/buildkite-plugins/monorepo-diff-buildkite-plugin"
+  local _repo="https://github.com/altana-ai/monorepo-diff-buildkite-plugin"
 
   get_version || return 1
   local _specified_version="$RETVAL"
